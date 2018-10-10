@@ -20,8 +20,8 @@ jQuery(document).ready(function() {
            var duration = moment.duration(diffTime, 'milliseconds');
            var days = duration.days();
            var interval = 1000;
-           var subMessage = $('.sub-message');
-           var clock = $('.clock');
+           var subMessage = jQuery('.sub-message');
+           var clock = jQuery('.clock');
            if(diffTime < 0){
                endEvent(subMessage, config.newSubMessage, clock);
                return;
