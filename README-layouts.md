@@ -44,3 +44,22 @@ block main
 
 block extra-scripts
 ```
+
+## competition/competition.pug
+```pug
+extends ../layouts/primary.pug
+
+block main
+
+  .Search-loading
+
+  .Section.Section--pt-lg
+    include ./competition-hero.pug
+
+  .Section.Section--pt-lg.Section--pb-lg
+    include ./competition-tabs.pug
+  .Search-loading
+  include ../partials/modal-notifications.pug
+
+block extra-scripts
+```
