@@ -179,3 +179,45 @@ block main
 
 block extra-scripts
 ```
+
+##  media-and-sponsors/media-and-sponsors.pug 
+```pug
+extends ../layouts/primary.pug
+
+block main
+  .Section.Competitions-Banner
+    include ../media-and-sponsors/media-and-sponsors-hero.pug
+
+  Section.Section--pt-lg.Section--pb-lg.Section--bgLight
+    .Container.Container--wide
+      include ../media-and-sponsors/media-and-sponsors-about.pug
+
+  Section.Section--pt-lg.Section--pb-lg
+    .Container.Container--wide
+      include ../media-and-sponsors/media-and-sponsors-social.pug
+
+  Section.Section--pt-lg.Section--pb-lg.Section--bgLight
+    .Container.Container--wide
+      include ../media-and-sponsors/media-and-sponsors-athletes.pug
+
+  Section.Section--pt-lg.Section--pb-lg
+    .Container.Container--wide
+      include ../media-and-sponsors/media-and-sponsors-competitions.pug
+
+  Section
+    include ../media-and-sponsors/media-and-sponsors-contact.pug
+```
+
+## photo-gallery/index.pug 
+```pug
+extends ../layouts/primary.pug
+
+block main
+  .Section.Section--marginExtra
+    h1.TitleSection.TitleSection--smaller.TitleSection--mb.TitleSection--border.TitleSection--dark=album.title
+    .js-photo-albums
+
+  include ./modal-image.pug
+
+block extra-scripts
+```
