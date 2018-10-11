@@ -88,7 +88,7 @@ block extra-scripts
 ## country/index.pug
 
 ## development/development.pug
-```
+```pug
 extends ../layouts/primary.pug
 
 block main
@@ -102,6 +102,33 @@ block main
 
   .Section
     include ../partials/cta-help-in-equipment.pug
+
+block extra-scripts
+```
+
+## discover/discover.pug 
+```pug
+extends ../layouts/primary.pug
+
+block main
+  .Section.Section--marginExtra
+    .js-discover-grid
+
+  .Search-loading
+
+  .Section
+    include ../partials/cta-world-fencing-day
+
+  .Section.Section--marginExtra
+    .js-photo-albums.Discover-contentGrid
+
+  .Section.Section--marginExtra
+    include ../magazine/magazine-filter.pug
+    .js-magazine-container
+
+
+  .Section
+    include ../partials/cta-magazine.pug
 
 block extra-scripts
 ```
