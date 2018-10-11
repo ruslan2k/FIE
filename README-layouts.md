@@ -65,7 +65,7 @@ block extra-scripts
 ```
 
 ## competitions/competitions.pug 
-```
+```pug
 extends ../layouts/primary.pug
 
 block main
@@ -129,6 +129,53 @@ block main
 
   .Section
     include ../partials/cta-magazine.pug
+
+block extra-scripts
+```
+
+## donate/index.pug 
+```pug
+extends ../layouts/primary.pug
+
+block main
+  .Section
+    include ./hero.pug
+  .Section.Section--pt-lg.Section--pb-lg
+    include ./excerpt.pug
+  .Section.Section--pb-lg
+    include ./videos.pug
+  .Section
+    .js-articles-container
+  .Section.Section--pt-lg
+    include ./photo-gallery.pug
+  .Section.Section--pb-lg
+    include ./downloads-donors.pug
+
+block extra-scripts
+```
+
+## hall-of-fame/index.pug 
+```pug
+extends ../layouts/primary.pug
+
+block main
+  .Section.Section--marginExtra
+    .js-hall-of-fame-grid
+  .Search-loading
+  include ../partials/modal-card.pug
+
+block extra-scripts
+```
+
+## magazine/magazine.pug 
+```pug
+extends ../layouts/primary.pug
+
+block main
+
+  .Section.Section--pb-lg
+    include ./magazine-filter.pug
+    .js-magazine-container
 
 block extra-scripts
 ```
