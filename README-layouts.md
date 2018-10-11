@@ -63,3 +63,45 @@ block main
 
 block extra-scripts
 ```
+
+## competitions/competitions.pug 
+```
+extends ../layouts/primary.pug
+
+block main
+  .Section.Competitions-Banner
+    include ../partials/cta-grand-prix.pug
+
+  .Section.Competitions-Filters
+    include ./competitions-filters.pug
+
+  .Section
+    include ./competitions-search.pug
+
+  .Section.Section--pb-lg.Search-container
+    .js-competitions-grid
+    .Search-loading
+
+block extra-scripts
+```
+
+## country/index.pug
+
+## development/development.pug
+```
+extends ../layouts/primary.pug
+
+block main
+  .Section.Competitions-Banner
+    include ../partials/cta-donate.pug
+
+  .Section.Section--pb-lg.Competitions-Filters
+    include ./development-filter.pug
+    .js-development-container
+  .Search-loading
+
+  .Section
+    include ../partials/cta-help-in-equipment.pug
+
+block extra-scripts
+```
