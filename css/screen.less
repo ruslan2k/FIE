@@ -58,6 +58,7 @@
 	     opacity: 1;
 	   }
 	}
+	.top-xs-show,
 	.xs-menu,
 	.follow-us{
 		display: none;
@@ -1616,6 +1617,96 @@
 		}
 	}
 
+/* ====Clean Sport ==== */
+	.clean-sport-header{
+		min-height: 293px;
+		background: url(../img/clean-spor-bgt.jpg) no-repeat center;
+		padding: 110px 15px 15px 15px;
+		.clean-sport-header-h{
+			font-family: 'futurabold';
+			text-align: center;
+			color: #fff;
+			font-size: 73px;
+			line-height: 1;
+		}
+	}
+	.clean-sport-flex-parent{
+		background: #e9e9f1;
+		padding: 40px 0 5px 0;
+		.col-xs-12{
+			display: flex;
+			align-items: flex-start;
+			justify-content: space-between;
+			.left{
+				padding-right: 50px;
+				width: 100%;
+				> div{
+					margin-bottom: 60px;
+					> p{
+						font-family: 'futurabold';
+						font-size: 24px;
+						color: @blue;
+						line-height: 1;
+						text-transform:uppercase;
+						margin-bottom: 18px;
+					}
+					> a{
+						display: block;
+						color: @blue;
+						font-size: 17px;
+						padding: 15px;
+						background: #e0e0ec;
+						margin-bottom: 12px;
+						transition: box-shadow .2s,background-color .2s;
+						&:hover{
+							background-color: #fff;
+	    					box-shadow: 0 1.5rem 3.5rem -0.5rem rgba(44,39,109,.1);
+						}
+					}
+				}
+			}
+			.right{
+				.heading{
+					font-family: 'futurabold';
+					font-size: 20px;
+					display: inline-block;
+					border-bottom:2px solid @aqua;
+					color: @blue;
+					margin-bottom: 25px;
+				}
+				ul{
+					list-style: none;
+					padding: 0;
+					margin: 0;
+					li{
+						a{
+							color: @blue;
+							display: inline-block;
+							font-size: 20px;
+							padding: 11px 0;
+							line-height: 1.1;
+							border-bottom:1px solid #c9c9cf;
+							display: block;
+							transition: .4s;
+							&:hover{
+								color: @aqua;
+							}
+						}
+						&.active{
+							a{
+								font-family: 'futurabold';
+							}
+						}
+						&:last-child{
+							a{
+								border-bottom:none;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
 
 
@@ -1720,7 +1811,6 @@
 		.athletes-rankings .flex-cards .card img{
 			width: 100%;
 		}
-
 	}
 
 	@media (max-width: 1010px) {
@@ -1989,7 +2079,9 @@
 		.championnats-asiatiques .flex-parent{
 			margin-bottom: 30px;
 		}
-
+		.clean-sport-flex-parent .col-xs-12 .left{
+			padding-right: 30px;
+		}
 	}
 
 	@media (max-width: 767px){
@@ -2471,8 +2563,55 @@
 			font-size: 15px;
 		}
 		.championnats-asiatiques .overview .flex-overview .center>div b img {
-		    vertical-align: 0;
-		    max-width: 17px;
+		   vertical-align: 0;
+		   max-width: 17px;
+		}
+		.clean-sport-flex-parent .col-xs-12 .left{
+			padding-right: 0;
+		}
+		.clean-sport-flex-parent .col-xs-12 .right{
+			display: none;
+		}
+		.clean-sport-flex-parent .col-xs-12 .left>div>p{
+			font-size: 20px;
+		}
+		.clean-sport-flex-parent .col-xs-12 .left>div>a{
+			font-size: 16px;
+			padding: 10px 15px;
+		}
+		.clean-sport-flex-parent .col-xs-12 .left>div{
+			margin-bottom: 40px;
+		}
+		.clean-sport-flex-parent .col-xs-12{
+			flex-direction: column;
+		}
+		.top-xs-show{
+			display: block;
+			margin-bottom: 20px;
+			select{
+				max-width: 300px;
+				width: 100%;
+				height: 50px;
+				padding-left: 30px;
+				padding-right: 35px;
+				border:1px solid #adadac;
+				border-radius:2px;
+				font-size: 18px;
+				color: @blue;
+			   -webkit-appearance: none;
+			   -moz-appearance: none;
+			   appearance: none;
+			   background: url(../img/icons/icon-down.png) no-repeat 94%;
+			   background-color: #fff;
+			}
+		}
+		.clean-sport-header .clean-sport-header-h{
+			font-size:50px;
+		}
+		.clean-sport-header {
+			min-height: 193px;
+			background: url(../img/clean-spor-bgt.jpg) no-repeat center;
+			padding: 60px 15px 15px 15px;
 		}
 	}
 
