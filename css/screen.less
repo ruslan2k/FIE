@@ -679,7 +679,7 @@
 				}
 				border-radius: 8px;
 				.table{
-					 box-shadow: 3px 2px 12px #c7c7ce;
+					box-shadow: 3px 2px 12px #c7c7ce;
 					width: 100%;
 					margin-bottom: 0;
 					tr{
@@ -1494,6 +1494,131 @@
 
 	}
 
+/* ==== Championnats Asiatiques ==== */
+	.championnats-asiatiques {
+		background: #e9e9f1;
+		padding: 75px 0 65px 0;
+		.date{
+			font-size: 33px;
+			line-height: 1;
+			color: @blue;
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		.championnats-asiatiques-h{
+			font-family: 'futurabold';
+			font-size: 74px;
+			text-align: center;
+			line-height: 1;
+			margin-bottom: 50px;
+			color: @blue;
+		}
+		.flex-parent{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: 50px;
+			> p{
+				font-size: 23px;
+				line-height: 1;
+				border-radius: 5px;
+				background: #fff;
+				color: @blue;
+				padding: 13px 40px;
+				text-align: center;
+				min-width: 230px;
+				b{
+					font-family: 'futurabold';
+					font-weight:normal;
+				}
+			}
+		}
+		.overview{
+			box-shadow: 3px 2px 12px #c7c7ce;
+			padding: 45px 50px;
+			background: #fff;
+			border-top: 2px solid @aqua;
+			border-radius:5px;
+			.overview-h{
+				text-align: center;
+				color: @blue;
+				font-size:45px;
+				font-family: 'futurabold';
+				line-height: 1;
+				margin-bottom: 10px;
+			}
+			.flex-overview{
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+				.left{
+					> p{
+						color: @blue;
+						font-size: 28px;
+						margin-bottom: 60px;
+						&:last-child{
+							margin-bottom: 0;
+						}
+						b{
+							font-family: 'futurabold';
+							font-weight:normal;
+							display: block;
+						}
+					}
+				}
+				.center{
+					color: @blue;
+					> div{
+						margin-bottom: 75px;
+						&:last-child{
+							margin-bottom: 0;
+						}
+						p{
+							line-height: 1;
+							font-size: 27px;
+							margin-bottom: 14px;
+						}
+						b{
+							display: block;
+							line-height: 1;
+							font-size: 27px;
+							font-family: 'futurabold';
+							font-weight:normal;
+							img{
+								vertical-align: -2px;
+							}
+						}
+					}
+				}
+				.right{
+					display: flex;
+					flex-direction: column;
+					a{
+						display: inline-block;
+						text-align: center;
+						font-size: 20px;
+						color: @blue;
+						margin-bottom: 14px;
+						box-shadow: 0 2px 11px #d9d9d9;
+						padding: 12px 25px;
+						text-align: center;
+						font-size: 19px;
+						&:last-child{
+							margin-bottom: 0;
+						}
+						i{
+							display: inline-block;
+							margin-left: 8px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+
 /* ==== MEDIA ==== */
 	@media (max-width: 1210px) {
 		header .primary-menu .menu li a{
@@ -1829,6 +1954,42 @@
 		.athletes-rankings-table .statistics-table .col-xs-12 .table-parent .text-center ul.pager li{
 			font-size: 20px;
 		}
+		.championnats-asiatiques .date{
+			font-size: 28px;
+		}
+		.championnats-asiatiques .championnats-asiatiques-h{
+			font-size: 58px;
+		}
+		.championnats-asiatiques .flex-parent>p{
+			font-size: 19px;
+		}
+		.championnats-asiatiques .flex-parent{
+			flex-wrap: wrap;
+		}
+		.championnats-asiatiques .flex-parent>p{
+			min-width: 49%;
+			margin-bottom: 8px;
+		}
+		.championnats-asiatiques .overview .flex-overview{
+			flex-wrap: wrap;
+		}
+		.championnats-asiatiques .overview .flex-overview .right{
+			margin-top: 25px;
+			flex-direction: row;
+			flex-wrap: wrap;
+			width: 100%;
+			justify-content: space-between;
+		}
+		.championnats-asiatiques .overview .flex-overview .right a{
+			width: 49%;
+		}
+		.championnats-asiatiques .overview .flex-overview .right a:last-child{
+			margin-bottom: 14px;
+		}
+		.championnats-asiatiques .flex-parent{
+			margin-bottom: 30px;
+		}
+
 	}
 
 	@media (max-width: 767px){
@@ -2262,4 +2423,56 @@
 			min-width: 130px;
 			line-height: 30px;
 		}
+		.championnats-asiatiques{
+			padding: 40px 0 60px 0;
+		}
+		.championnats-asiatiques .date{
+			font-size: 18px;
+		}
+		.championnats-asiatiques .championnats-asiatiques-h{
+			font-size: 38px;
+			margin-bottom: 28px;
+		}
+		.championnats-asiatiques .flex-parent>p{
+			width: 100%;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		.championnats-asiatiques .overview .flex-overview .right a{
+			width: 100%;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		.championnats-asiatiques .overview{
+			padding: 15px 15px 1px 15px;
+		}
+		.flex-overview .left{
+			width: 50%;
+		}
+		.flex-overview .center{
+			width: 50%;
+		}
+		.championnats-asiatiques .overview .flex-overview .left>p{
+			margin-bottom: 20px;
+		}
+		.championnats-asiatiques .overview .flex-overview .center>div{
+			margin-bottom: 13px;
+			padding-top: 7px;
+		}
+		.championnats-asiatiques .overview .flex-overview .left>p{
+			font-size: 19px;
+		}
+		.championnats-asiatiques .overview .flex-overview .center>div p{
+			font-size: 19px;
+			margin-bottom: 5px;
+		}
+
+		.championnats-asiatiques .overview .flex-overview .center>div b{
+			font-size: 15px;
+		}
+		.championnats-asiatiques .overview .flex-overview .center>div b img {
+		    vertical-align: 0;
+		    max-width: 17px;
+		}
 	}
+
