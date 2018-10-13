@@ -1617,7 +1617,7 @@
 		}
 	}
 
-/* ====Clean Sport ==== */
+/* ==== Clean Sport ==== */
 	.clean-sport-header{
 		min-height: 293px;
 		background: url(../img/clean-spor-bgt.jpg) no-repeat center;
@@ -1707,6 +1707,154 @@
 			}
 		}
 	}
+
+/* ==== Executive Committee ==== */
+	.executive-committee-header{
+		padding: 35px 0;
+		background: url(../img/executive-committee-header-bg.jpg) no-repeat center; 
+		background-size: cover;
+		color: #fff;
+		.col-xs-12{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			.info{
+				p{
+					font-family: 'futurabold';
+					font-size: 45px;
+					color: #fff;
+					line-height: 1;
+					margin-bottom: 40px;
+				}
+				span{
+					display: inline-block;
+					font-size: 25px;
+					line-height: 1.2;
+				}
+			}
+			.list-menu{
+				a.heading{
+					font-size: 20px;
+					display: inline-block;
+					border-bottom:2px solid @aqua;
+					font-family: 'futurabold';
+					color: #fff;
+					margin-bottom: 15px;
+				}
+				ul{
+					list-style: none;
+					padding: 0;
+					margin: 0;
+					li{
+						a{
+							display: block;
+							font-size:20px;
+							line-height: 1;
+							padding: 18px 0;
+							color: #fff;
+							border-bottom:1px solid #fff;
+							transition: .4s;
+							&:hover{
+								color: @aqua;
+							}
+						}
+						&.active{
+							a{
+								color: @aqua;
+								font-family: 'futurabold';
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.executive-committee{
+		background: #e9e9f1;
+		padding: 40px 0;
+		.col-xs-12{
+			display: flex;
+			align-items: stretch;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			.card{
+				background-color: #fff;
+				padding: 14px 10px;
+				display: flex;
+				align-items: stretch;
+				width: 49%;
+				box-shadow: 3px 2px 12px #c7c7ce;
+				margin-bottom: 20px;
+				border-radius:5px;
+				img{
+					width: 157px;
+					min-width: 157px;
+					height: 173px;
+					object-fit: cover;
+					margin-right: 10px;
+				}
+				.info{
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					width: 100%;
+					.top{
+						p{
+							font-family: 'futurabold';
+							font-size: 26px;
+							color: @blue;
+							line-height: 1.1;
+
+						}
+						span{
+							font-size: 20px;
+							color: @blue;
+							display: block;
+							line-height: 1.1;
+						}
+					}
+					.sub{
+						display: flex;
+						align-items: flex-end;
+						justify-content: space-between;
+						width: 100%;
+						div{
+							p{
+								font-size: 19px;
+								color: #3c3c3d;
+								line-height: 1;
+								white-space: nowrap;
+								a{
+									color: #3c3c3d;
+									transition: .4s;
+									&:hover{
+										color: @blue;
+									}
+								}
+							}
+						}
+						> a{
+							background: #364883;
+							color: #fff;
+							padding: 6px 10px;
+							border-radius:5px;
+							font-size:18px;
+							display: inline-block;
+							line-height: 1;
+							border: 1px solid #364883;
+							transition: .4s;
+							white-space: nowrap;
+							&:hover{
+								background: #fff;
+								color: @blue;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
 
 
 
@@ -1810,6 +1958,20 @@
 		}
 		.athletes-rankings .flex-cards .card img{
 			width: 100%;
+		}
+		.executive-committee .col-xs-12 .card img{
+			width: 137px;
+			min-width: 137px;
+			height: 153px;
+		}
+		.executive-committee .col-xs-12 .card .info .sub div p{
+			font-size: 17px;
+		}
+		.executive-committee .col-xs-12 .card .info .top p{
+			font-size: 23px;
+		}
+		.executive-committee .col-xs-12 .card .info .top span{
+			font-size: 18px;
 		}
 	}
 
@@ -2081,6 +2243,19 @@
 		}
 		.clean-sport-flex-parent .col-xs-12 .left{
 			padding-right: 30px;
+		}
+		.executive-committee-header .col-xs-12 .info span{
+			font-size: 19px;
+		}
+		.executive-committee-header .col-xs-12 .info p{
+			font-size: 38px;
+		}
+		.executive-committee-header .col-xs-12 .list-menu a.heading,
+		.executive-committee-header .col-xs-12 .list-menu ul li a{
+			font-size: 18px;
+		}
+		.executive-committee .col-xs-12 .card{
+			width: 100%;
 		}
 	}
 
@@ -2612,6 +2787,48 @@
 			min-height: 193px;
 			background: url(../img/clean-spor-bgt.jpg) no-repeat center;
 			padding: 60px 15px 15px 15px;
+		}
+		.executive-committee-header .col-xs-12{
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+		.executive-committee-header .col-xs-12 .info p{
+			font-size: 29px;
+			margin-bottom: 15px;
+		}
+		.executive-committee-header .col-xs-12 .info span{
+			font-size: 16px;
+			margin-bottom: 20px;
+			display: block;
+			br{
+				display: none;
+				
+			}
+		}
+		.executive-committee-header .col-xs-12 .list-menu a.heading, 
+		.executive-committee-header .col-xs-12 .list-menu ul li a{
+			font-size: 16px;
+		}
+		.executive-committee-header .col-xs-12 .list-menu ul li a{
+			padding: 8px 0;
+		}
+		.executive-committee-header .col-xs-12 .list-menu a.heading{
+			margin-bottom: 8px;
+		}
+		.executive-committee .col-xs-12 .card {
+		   width: 100%;
+		   flex-direction: column;
+		   align-items: center;
+		}
+		.executive-committee .col-xs-12 .card .info .sub{
+			margin-top: 10px;
+		}
+		.executive-committee .col-xs-12 .card .info .sub>a{
+			padding: 4px 8px;
+		}
+		.executive-committee .col-xs-12 .card .info .sub>a{
+			font-size: 15px;
 		}
 	}
 
