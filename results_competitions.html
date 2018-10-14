@@ -137,15 +137,16 @@
 		</div>
 	</header>
 	
-	<section class="athletes-rankings">
+	<section class="athletes-rankings results-competitions">
 		<div class="container small">
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="flex-parent">
-						<p class="athletes-rankings-h">Athletes & Rankings</p>
-						<div class="links">
-							<a href="#" class="active">Rankings</a>
-							<a href="#">Search all</a>
+						<p class="athletes-rankings-h">Competitions</p>
+						<div class="links"> 
+							<a href="#" class="active">Results</a>
+							<span> / </span>
+							<a href="#">Upcoming</a>
 						</div>
 					</div>
 					<form>
@@ -182,7 +183,7 @@
 											<span>Individual</span>
 										</label>
 										<label>
-											<input type="checkbox"><i></i>
+											<input type="checkbox" checked="checked"><i></i>
 											<span>Team</span>
 										</label>
 									</div>
@@ -209,43 +210,49 @@
 								</div>
 								<div class="select-row">
 									<select>
-										<option value="">2017 / 2018</option>
-										<option value="">2015 / 2016</option>
-										<option value="">2013 / 2014</option>
-										<option value="">2011 / 2012</option>
+										<option>All event types</option>
+										<option value="">item 1</option>
+										<option value="">item 2</option>
+										<option value="">item 3</option>
 									</select>
-									<a href="#" class="download">General Ranks <i class="fa fa-download"></i></a>
+									<select>
+										<option>All age groups</option>
+										<option value="">item 1</option>
+										<option value="">item 2</option>
+										<option value="">item 3</option>
+									</select>
+									<select>
+										<option>From</option>
+										<option value="">item 1</option>
+										<option value="">item 2</option>
+										<option value="">item 3</option>
+									</select>
+									<select>
+										<option>To</option>
+										<option value="">item 1</option>
+										<option value="">item 2</option>
+										<option value="">item 3</option>
+									</select>
+									<select>
+										<option>Select season</option>
+										<option value="">item 1</option>
+										<option value="">item 2</option>
+										<option value="">item 3</option>
+									</select>
 								</div>
 							</div>
 						</div>
 					</form>
-
-					<div class="flex-cards">
-						<a href="#" class="card">
-							<img src="img/fc1.jpg" alt="alt"/>
-							<p class="name">Szasz-Kovacs Emese</p>
-							<p class="count">1</p>
-							<p class="points">Points: <b>165.0</b></p>
-						</a>
-						<a href="#" class="card">
-							<img src="img/fc2.jpg" alt="alt"/>
-							<p class="name">Nelip Ewa</p>
-							<p class="count c2">2</p>
-							<p class="points">Points: <b>158.0</b></p>
-						</a>
-						<a href="#" class="card">
-							<img src="img/fc3.jpg" alt="alt"/>
-							<p class="name">Navarria Mara</p>
-							<p class="count c3">3</p>
-							<p class="points">Points: <b>157.0</b></p>
-						</a>
+					<div class="calendar-links">
+						<a href="#">Global Calendar</a>
+						<a href="#">FIE Calendar</a>
 					</div>
 				</div>
 			</div>
 		</div>	
 	</section>
 
-	<section class="athletes-rankings-table">
+	<section class="athletes-rankings-table results-competitions-table">
 		<section class="statistics-table">
 			<div class="container small">
 				<div class="row">
@@ -253,92 +260,194 @@
 						<div class="table-parent">
 							<table class="table">
 								<tr>
-									<th>Rank</th>
-									<th>Points</th>
-									<th>Name</th>
-									<th>Country</th>
-									<th>Hand</th>
-									<th>Age</th>
+									<th>Competition</th>
+									<th>Place</th>
+									<th>Date</th>
+									<th>Weap.</th>
+									<th>Gender</th>
+									<th>Category</th>
+									<th>Event</th>
+									<th>Results</th>
 								</tr>
 								<tr>
-									<td>1</td>
-									<td>165.0</td>
-									<td>Szasz-Kovacs Emese</td>
-									<td><img src="img/flags/hun.png" alt="alt"/></td>
-									<td>L</td>
-									<td>35</td>
-								</tr>
-								<tr>
-									<td>2</td>
-									<td>158.0</td>
-									<td>Nelip Ewa</td>
-									<td><img src="img/flags/pol.png" alt="alt"/></td>
-									<td>R</td>
-									<td>29</td>
-								</tr>
-								<tr>
+									<td>
+										<p><i class="fa fa-play"></i>Championnats <br/>D'Afrique Juniors</p>
+									</td>
+									<td>
+										<p>Wuxi</p>
+										<p class="sm">( <img src="img/flags/f-chn.png" /> CHN)</p>
+									</td>
+									<td>
+										<p>Start:19-07-2018</p>
+										<p>End:27-07-2018</p>
+									</td>
 									<td>3</td>
-									<td>157.0</td>
-									<td>Navarria Mara</td>
-									<td><img src="img/flags/ita.png" alt="alt"/></td>
-									<td>R</td>
-									<td>33</td>
+									<td>Men/Women</td>
+									<td>Senior</td>
+									<td>2</td>
+									<td></td>
 								</tr>
 								<tr>
-									<td>4</td>
-									<td>144.0</td>
-									<td>Gudkova Tatiana</td>
-									<td><img src="img/flags/rus.png" alt="alt"/></td>
-									<td>L</td>
-									<td>25</td>
+									<td>
+										<p><i class="fa fa-play"></i>Jeux Méditerranéens</p>
+									</td>
+									<td>
+										<p>Tarragona</p>
+										<p class="sm">( <img src="img/flags/f-esp.png" /> ESP)</p>
+									</td>
+									<td>
+										<p>Start:24-06-2018</p>
+										<p>End:25-06-2018</p>
+									</td>
+									<td>3</td>
+									<td>Men/Women</td>
+									<td>Senior</td>
+									<td>Individual</td>
+									<td></td>
 								</tr>
 								<tr>
-									<td>5</td>
-									<td>138.0</td>
-									<td>Kryvytska Olena</td>
-									<td><img src="img/flags/ukr.png" alt="alt"/></td>
-									<td>R</td>
-									<td>31</td>
+									<td>
+										<p><i class="fa fa-play"></i>Championnats <br/>Asiatiques</p>
+									</td>
+									<td>
+										<p>Bangkok</p>
+										<p class="sm">( <img src="img/flags/f-tha.png" /> THA)</p>
+									</td>
+									<td>
+										<p>Start:17-06-2018</p>
+										<p>End:22-06-2018</p>
+									</td>
+									<td>3</td>
+									<td>Men/Women</td>
+									<td>Senior</td>
+									<td>2</td>
+									<td></td>
 								</tr>
 								<tr>
-									<td>6</td>
-									<td>126.0</td>
-									<td>Kang Young Mi</td>
-									<td><img src="img/flags/kor.png" alt="alt"/></td>
-									<td>L</td>
-									<td>33</td>
+									<td>
+										<p><i class="fa fa-play"></i>Championnats <br/>D'Europe</p>
+									</td>
+									<td>
+										<p>Novi Sad</p>
+										<p class="sm">( <img src="img/flags/f-srb.png" /> SRB)</p>
+									</td>
+									<td>
+										<p>Start:17-06-2018</p>
+										<p>End:22-06-2018</p>
+									</td>
+									<td>3</td>
+									<td>Men/Women</td>
+									<td>Senior</td>
+									<td>2</td>
+									<td></td>
 								</tr>
 								<tr>
-									<td>7</td>
-									<td>125.0</td>
-									<td>Beljajeva Julia</td>
-									<td><img src="img/flags/est.png" alt="alt"/></td>
-									<td>R</td>
-									<td>26</td>
+									<td>
+										<p><i class="fa fa-play"></i>Championnats <br/>Panaméricains</p>
+									</td>
+									<td>
+										<p>Novi Sad</p>
+										<p class="sm">( <img src="img/flags/f-cub.png" /> CUB)</p>
+									</td>
+									<td>
+										<p>Start:17-06-2018</p>
+										<p>End:22-06-2018</p>
+									</td>
+									<td>3</td>
+									<td>Men/Women</td>
+									<td>Senior</td>
+									<td>2</td>
+									<td></td>
 								</tr>
 								<tr>
-									<td>8</td>
-									<td>120.0</td>
-									<td>Sun Yiwen</td>
-									<td><img src="img/flags/chn.png" alt="alt"/></td>
-									<td>L</td>
-									<td>26</td>
+									<td>
+										<p><i class="fa fa-play"></i>Championnats <br/> D'Afrique</p>
+									</td>
+									<td>
+										<p>Tunis</p>
+										<p class="sm">( <img src="img/flags/f-tun.png" /> TUN)</p>
+									</td>
+									<td>
+										<p>Start:17-06-2018</p>
+										<p>End:22-06-2018</p>
+									</td>
+									<td>3</td>
+									<td>Men/Women</td>
+									<td>Senior</td>
+									<td>2</td>
+									<td></td>
 								</tr>
 								<tr>
-									<td>9</td>
-									<td>120.0</td>
-									<td>Ndolo Alexandra</td>
-									<td><img src="img/flags/ger.png" alt="alt"/></td>
-									<td>L</td>
-									<td>32</td>
+									<td>
+										<p><i class="fa fa-play"></i>Championnats <br/>Asiatiques</p>
+									</td>
+									<td>
+										<p>Bangkok</p>
+										<p class="sm">( <img src="img/flags/f-tha.png" /> THA)</p>
+									</td>
+									<td>
+										<p>Start:17-06-2018</p>
+										<p>End:22-06-2018</p>
+									</td>
+									<td>3</td>
+									<td>Men/Women</td>
+									<td>Senior</td>
+									<td>2</td>
+									<td></td>
 								</tr>
 								<tr>
-									<td>10</td>
-									<td>118.0</td>
-									<td>Kong Man Wai Vivian</td>
-									<td><img src="img/flags/hkg.png" alt="alt"/></td>
-									<td>L</td>
-									<td>24</td>
+									<td>
+										<p><i class="fa fa-play"></i>Championnats <br/>D'Europe</p>
+									</td>
+									<td>
+										<p>Novi Sad</p>
+										<p class="sm">( <img src="img/flags/f-srb.png" /> SRB)</p>
+									</td>
+									<td>
+										<p>Start:17-06-2018</p>
+										<p>End:22-06-2018</p>
+									</td>
+									<td>3</td>
+									<td>Men/Women</td>
+									<td>Senior</td>
+									<td>2</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<p><i class="fa fa-play"></i>Championnats <br/>D'Afrique Juniors</p>
+									</td>
+									<td>
+										<p>Wuxi</p>
+										<p class="sm">( <img src="img/flags/f-chn.png" /> CHN)</p>
+									</td>
+									<td>
+										<p>Start:19-07-2018</p>
+										<p>End:27-07-2018</p>
+									</td>
+									<td>3</td>
+									<td>Men/Women</td>
+									<td>Senior</td>
+									<td>2</td>
+									<td></td>
+								</tr>
+								<tr>
+									<td>
+										<p><i class="fa fa-play"></i>Championnats <br/>D'Europe</p>
+									</td>
+									<td>
+										<p>Novi Sad</p>
+										<p class="sm">( <img src="img/flags/f-srb.png" /> SRB)</p>
+									</td>
+									<td>
+										<p>Start:17-06-2018</p>
+										<p>End:22-06-2018</p>
+									</td>
+									<td>3</td>
+									<td>Men/Women</td>
+									<td>Senior</td>
+									<td>2</td>
+									<td></td>
 								</tr>
 							</table>
 							<div class="text-center">
