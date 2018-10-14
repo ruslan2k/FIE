@@ -139,7 +139,10 @@ jQuery(document).ready(function() {
   jQuery('.top-row .search-container input').focus(function(){
     jQuery('.top-row .check-container button[type=submit]').addClass('active');
   });
-
+  
+  jQuery('.wach-sub-filter .serach-f-wrapper input').focus(function(){
+    jQuery('.wach-sub-filter .serach-f-wrapper button[type=submit]').addClass('active');
+  });
 
 
   jQuery('.top-row .check-container .check').on('change', function(){
@@ -150,6 +153,23 @@ jQuery(document).ready(function() {
     }
   });
 
+  jQuery('.wach-sub-filter .wach-cards .card').on('click', function(){
+    var videoLink = jQuery(this).attr('data-link');
+        cardH = jQuery(this).children('.card-h').html(),
+        cardDate = jQuery(this).children('.card-info').children('.card-date').html(),
+        cardTitle = jQuery(this).children('.card-info').children('.card-title').html(),
+        cardLink = jQuery(this).children('.card-info').children('.card-link').html();
+
+    jQuery('.wach-main-player .wach-player-wrapper .frame-wr iframe').attr('src',videoLink); 
+    jQuery('.wach-main-player .wach-h').html(cardH);
+    jQuery('.wach-main-player .wach-date').html(cardDate);
+    jQuery('.wach-main-player .wach-player-wrapper .wach-title').html(cardTitle);
+    jQuery('.wach-main-player .wach-player-wrapper .wach-link').html(cardLink);
+
+    jQuery('html, body').animate({scrollTop:0}, 400);
+
+
+  });
 
   
 });

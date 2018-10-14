@@ -2453,6 +2453,198 @@
 		 }
 	}
 
+/* ==== Wach ==== */
+	.wach-main-player{
+		background: url(../img/Athletes_ranking_bg.jpg) no-repeat center;
+		background-size: cover;
+		padding-top: 40px;
+		padding-bottom: 40px;
+		.wach-h{
+			color: #fff;
+			font-size: 33px;
+			text-align: center;
+			font-family: 'futurabold';
+			line-height: 1;
+			margin-bottom: 10px;
+			br{
+				display: none;
+			}
+		}
+		.wach-date{
+			font-size: 17px;
+			line-height: 1;
+			color: #cfcfd2;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		.wach-player-wrapper{
+			max-width:1025px;
+			background: #fff;
+			padding: 15px 15px 30px 15px;
+			border-radius:5px;
+			.frame-wr{
+				width: 100%;
+				height: 540px;
+				iframe{
+					border: none!important;
+					width: 100%!important;
+					height: 100%!important;
+				}
+			}
+			.wach-title{
+				font-size: 22px;
+				color: #2e2f2f;
+				margin-top: 20px;
+				margin-bottom: 30px;
+				line-height: 1.1;
+				span{
+					display: none;
+				}
+			}
+			.wach-link{
+				font-size: 22px;
+				color: #2e2f2f;
+				line-height: 1.1;
+			}
+		}
+	}
+	.wach-sub-filter{
+		padding: 40px 0;
+		background: #e9e9f1;
+		.serach-f-wrapper{
+			padding: 15px 20px;
+			background: #dbdbdb;
+			position: relative;
+			max-width: 1025px;
+			margin: 0 auto 20px auto; 
+			border-radius:5px;
+			overflow:hidden; 
+			input{
+				line-height: 27px;
+				padding-left: 37px;
+				border: none;
+				font-size: 24px;
+				width: 100%;
+				background: url(../img/icons/zoom.png) no-repeat left;
+				color: @blue;
+				&::-webkit-input-placeholder { 
+					color: @blue;
+				}
+				&::-moz-placeholder {
+					color: @blue;
+				}
+				&:-ms-input-placeholder { 
+					color: @blue;
+				}
+				&:-moz-placeholder {
+					color: @blue;
+				}
+			}
+			button[type="submit"]{
+				position: absolute;
+				z-index: 5;
+				font-size: 18px;
+				color: #fff;
+				border-radius:5px;
+				padding: 0 15px;
+				min-width:110px;
+				background: #364883;
+				border: none;
+				height: 42px;
+				top: 8.5px;
+				right: 20px;
+				display: none;
+				&.active{
+					display: block;
+					animation: zoomIn .3s 1;
+				}
+			}
+		}
+		.wach-cards{
+			display: flex;
+			align-items: stretch;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			max-width: 1025px;
+			margin: 0 auto; 
+			.card{
+				width: 32%;
+				margin-bottom: 20px;
+				background: #fff;
+				transition: transform .4s,box-shadow .4s,-webkit-transform .4s;
+				transition-timing-function: cubic-bezier(.25,.1,.25,1);
+				box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.21);
+				margin-bottom: 15px;
+				border-radius:5px;
+				overflow:hidden; 
+				cursor: pointer;
+				&:hover{
+					box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.45);
+					-webkit-transform: translateY(-10px);
+					transform: translateY(-10px);
+				}
+				.card-h{
+					padding: 10px 15px;
+					color: #fff;
+					text-align: center;
+					background: #182d70;
+					line-height: 1.1;
+					font-size: 22px;
+				}
+				.img-wrapper{
+					width: 100%;
+					height: 200px;
+					position: relative;
+					img{
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+					> span{
+						display: inline-block;
+						position: absolute;
+						color: #fff;
+						font-size: 16px;
+						font-family: 'futurabold';
+						bottom: 0;
+						right: 0;
+						background: #9195ba;
+						line-height: 1;
+						padding: 5px 10px 3px 10px;
+					}
+				}
+				.card-info{
+					padding: 10px 15px;
+					font-size: 20px;
+					color: @blue;
+					.card-date{
+						margin-bottom: 5px;
+						color: #808080;
+					}
+				}
+			}
+		}
+		ul.pager{
+			margin: 20px auto 30px auto;
+			li{
+				font-size: 24px;
+				a{
+					border: none;
+					color:@blue;
+					border-radius:0;
+					background: transparent;
+				}
+				span{
+					color:@blue;
+					border:none;
+					font-family: 'futurabold';
+					background: transparent;
+				}
+			}
+		}
+	}
+
+
 
 
 
@@ -2907,6 +3099,38 @@
     	}
     	.athletes-rankings-table.results-competitions-table .statistics-table .col-xs-12 .table-parent .table tr th:nth-child(6){
     		border-top-right-radius:8px;
+    	}
+    	.wach-main-player .wach-player-wrapper .frame-wr{
+    		height: 440px;
+    	}
+    	.wach-sub-filter .wach-cards .card .card-h br{
+    		display: none;
+    	}
+    	.wach-sub-filter .wach-cards .card .card-h{
+    		padding: 10px;
+    	}
+    	.wach-sub-filter .wach-cards .card .card-h{
+    		font-size: 15px;
+    	}
+    	.wach-sub-filter .wach-cards .card .card-info{
+    		font-size: 15px;
+    	}
+    	.wach-sub-filter .wach-cards .card .img-wrapper>span{
+    		font-size: 14px;
+    	}
+    	.wach-sub-filter .wach-cards .card .img-wrapper{
+    		height: 160px;
+    	}
+    	.wach-main-player .wach-h{
+    		font-size: 30px;
+    	}
+    	.wach-main-player .wach-player-wrapper .wach-title{
+    		margin-top: 10px;
+    		margin-bottom: 20px;
+    		font-size: 18px;
+    	}
+    	.wach-main-player .wach-player-wrapper .wach-link{
+    		font-size: 18px;
     	}
 	}
 
@@ -3613,7 +3837,7 @@
 		.athletes-rankings.results-competitions .flex-parent .links a{
 			font-size: 15px;
 		}
-		.athletes-rankings .flex-parent .links a{
+		.athletes-rankings.results-competitions .flex-parent .links a{
 			min-width:100%;
 			display: inline;
 		}
@@ -3624,5 +3848,32 @@
 		.athletes-rankings-table.results-competitions-table .statistics-table .col-xs-12 .table-parent .table tr th{
 			font-size: 14px;
 		}
+		.wach-sub-filter ul.pager li a,
+		.wach-sub-filter ul.pager li span{
+			padding: 8px;
+		}
+ 		.wach-sub-filter .wach-cards{
+    		flex-direction: column;
+    	}
+    	.wach-sub-filter .wach-cards .card{
+    		width: 100%;
+    		max-width: 300px;
+    		margin-right: auto;
+    		margin-left: auto;
+    	}
+    	.wach-sub-filter .serach-f-wrapper button[type=submit]{
+    		min-width:75px;
+    		right: 0;
+    	}
+    	.athletes-rankings .filter-wrapper .top-row .search-container input,
+    	.wach-sub-filter .serach-f-wrapper input{
+    		font-size: 16px;
+    	}
+    	.wach-main-player .wach-player-wrapper .frame-wr{
+    		height: 330px;
+    	}
+    	.wach-main-player .wach-h{
+    		font-size: 26px;
+    	}
 	}
 
