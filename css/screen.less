@@ -1855,6 +1855,138 @@
 		}
 	}
 
+/* ==== Media Life Results ==== */
+	.athletes-rankings-table.media-res{
+		padding-top: 40px;
+		.media-res-h{
+			font-family: 'futurabold';
+			color: @blue;
+			margin-bottom: 30px;
+			line-height: 1;
+			font-size: 34px;
+		}
+		.media-res-menu{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			margin-bottom: 15px;
+			li{
+				margin-right: 20px;
+				&.active{
+					a{
+						font-family: 'futurabold';
+					}
+				}
+				&:last-child{
+					margin-right: 0;
+				}
+				a{
+					font-size: 18px;
+					color: @blue;
+					transition: .4s;
+					&:hover{
+						color: @aqua;
+					}
+				}
+			}
+		}
+	}	
+	.media-res-link{
+		display: block;
+		background: url(../img/executive-committee-header-bg.jpg) no-repeat center; 
+		background-size: cover;
+		padding: 40px 15px;
+		text-align: center;
+		color: #fff;
+		&:focus,
+		&:hover{
+			color: #fff;
+		}
+		u{
+			display: block;
+			line-height: 1;
+			text-decoration:none;
+			font-size: 25px;
+			margin-bottom: 20px;
+		}
+		span{
+			display: block;
+			line-height: 1;
+			font-size: 75px;
+			i{
+				display: inline-block;
+				font-size: 60px;
+				color: @aqua;
+				margin-left: 10px;
+			}
+
+		}
+	}
+	.media-res-social{
+		padding: 90px 0 85px 0;
+		background: #e9e9f1;
+		.flex-top-parent{
+			display: flex;
+			align-items: stretch;;
+			justify-content: space-between;
+			margin-bottom: 120px;
+			.card{
+				display: block;
+				background: #fff;
+				padding:18px 14px 14px 14px;
+				text-align: center;
+				border-radius:5px;
+				transition: transform .4s,box-shadow .4s,-webkit-transform .4s;
+				transition-timing-function: cubic-bezier(.25,.1,.25,1);
+				box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.21);
+				&:hover{
+					box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.45);
+					-webkit-transform: translateY(-10px);
+					transform: translateY(-10px);
+				}
+				p{
+					font-family: 'futurabold';
+					font-size: 34px;
+					line-height: 1;
+					color: @blue;
+					margin-bottom: 10px;
+				}
+				.img-wrapper{
+					display: block;
+					width: 308px;
+					height: 240px;
+					img{
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+		.flex-sub-parent{
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			a{
+				display: block;
+				width: 25%;
+				transition: transform .4s,-webkit-transform .4s;
+				transition-timing-function: cubic-bezier(.25,.1,.25,1);
+				&:hover{
+					-webkit-transform: translateY(-10px);
+					transform: translateY(-10px);
+				}
+				img{
+					width: 100%;
+				}
+
+			}
+		}
+	}
+
 
 
 
@@ -1972,6 +2104,13 @@
 		}
 		.executive-committee .col-xs-12 .card .info .top span{
 			font-size: 18px;
+		}
+		.media-res-social .flex-top-parent .card .img-wrapper{
+			width: 100%;
+			height: auto;
+		}
+		.media-res-social .flex-top-parent .card{
+			width: 32.5%;
 		}
 	}
 
@@ -2257,6 +2396,24 @@
 		.executive-committee .col-xs-12 .card{
 			width: 100%;
 		}
+		.media-res-social .flex-top-parent .card p{
+			font-size: 28px;
+		}
+		.media-res-social {
+			padding: 40px 0 45px 0;
+    	}
+    	.media-res-social .flex-top-parent{
+    		margin-bottom: 70px;
+    	}
+    	.media-res-link span{
+    		font-size: 65px;
+    		i{
+    			font-size: 50px;
+    		}
+    	}
+    	.athletes-rankings-table.media-res{
+    		padding-bottom: 45px;
+    	}
 	}
 
 	@media (max-width: 767px){
@@ -2829,6 +2986,35 @@
 		}
 		.executive-committee .col-xs-12 .card .info .sub>a{
 			font-size: 15px;
+		}
+		.media-res-social .flex-top-parent{
+			flex-wrap: wrap;
+			flex-direction: column;
+			margin-bottom: 40px;
+		}
+		.media-res-social .flex-top-parent .card{
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		.media-res-social .flex-sub-parent{
+			flex-wrap: wrap;
+		}
+		.media-res-social .flex-sub-parent a{
+			margin-bottom: 10px;
+			width: 50%;
+		}
+		.athletes-rankings-table.media-res .media-res-menu li a{
+			font-size: 14px;
+		}
+		.athletes-rankings-table.media-res .media-res-h {
+			margin-bottom: 17px;
+			font-size: 23px;
+		}
+		.media-res-link span{
+			font-size: 32px;
+			i{
+				font-size: 31px;
+			}
 		}
 	}
 
