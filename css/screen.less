@@ -2290,6 +2290,53 @@
 		}
 	}
 
+/* ==== Meetings ==== */
+	.meetings-wrapper{
+		padding: 50px 0;
+		background: #e9e9f1;
+		.meetings-menu{
+			list-style: none;
+			padding: 0;
+			margin:0;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			li{
+				margin-right: 22px;
+				&:last-child{
+					margin-right: 0;
+				}
+				a{
+					color: @blue;
+					font-size: 27px;
+					display: inline-block;
+					border-bottom: 2px solid transparent;
+					transition: .4s;
+					&:hover{
+						color:@aqua;
+					}
+				}
+				&.active a{
+					font-family: 'futurabold';
+					border-color:@aqua;
+				}
+			} 
+		}
+	}
+	.athletes-rankings-table.media-res.meetings-table{
+		padding: 0 0 76px 0;
+		.statistics-table .col-xs-12 .table-parent .table tr td:nth-child(3),
+		.statistics-table .col-xs-12 .table-parent .table tr th:nth-child(3){
+			text-align:center;
+			padding-left: 10px;
+		}
+		.statistics-table .col-xs-12 .table-parent .table tr td:nth-child(1),
+		.statistics-table .col-xs-12 .table-parent .table tr th:nth-child(1){
+			text-align:left;
+			padding-left: 20px;
+		}
+	}
+
 
 
 
@@ -3152,7 +3199,7 @@
 		}
 		.athletes-rankings-table .statistics-table .col-xs-12 .table-parent .table tr td:nth-child(3), 
 		.athletes-rankings-table .statistics-table .col-xs-12 .table-parent .table tr th:nth-child(3){
-			display: block;
+			display: table-cell;
 		}
 		.athletes-rankings-table .statistics-table .col-xs-12 .table-parent .table tr th:nth-child(2) {
 		   border-top-right-radius: 0;
@@ -3408,6 +3455,12 @@
 		}
 		.media-tab .tab-content .flex-parent{
 			margin-bottom: 40px;
+		}
+		.meetings-wrapper .meetings-menu li{
+			margin-right: 10px;
+		}
+		.meetings-wrapper .meetings-menu li a{
+			font-size: 11px;
 		}
 	}
 
