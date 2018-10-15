@@ -73,13 +73,11 @@ jQuery(document).ready(function() {
 
   jQuery(document).on('click', '.list-link', function() {
     var data = jQuery(this).attr('data-video');
-
     var video = jQuery('.'+data);
     var src = video.attr('src');
-   
     var frameCount = jQuery('.video iframe').size();
-    
-    for (var i = 1; i <= frameCount; i++) {
+
+    for (var i = 0; i < frameCount; i++) {
         var url = jQuery('.video'+i).prop('src');
         url = url.replace("&autoplay=1", "");
         jQuery('.video'+i).prop('src','');
