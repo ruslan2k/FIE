@@ -1,61 +1,61 @@
 jQuery(document).ready(function() {
 
-  jQuery(function(){
-      function timer(settings){
-           var config = {
-               endDate: '2019-12-31 24:00',
-               timeZone: 'Europe/Moscow',
-               hours: jQuery('#hours'),
-               minutes: jQuery('#minutes'),
-               seconds: jQuery('#seconds'),
-               newSubMessage: 'The time has come'
-           };
-           function prependZero(number){
-               return number < 10 ? '0' + number : number;
-           }
-           $.extend(true, config, settings || {});
-           var currentTime = moment();
-           var endDate = moment.tz(config.endDate, config.timeZone);
-           var diffTime = endDate.valueOf() - currentTime.valueOf();
-           var duration = moment.duration(diffTime, 'milliseconds');
-           var days = duration.days();
-           var interval = 1000;
-           var subMessage = jQuery('.sub-message');
-           var clock = jQuery('.clock');
-           if(diffTime < 0){
-               endEvent(subMessage, config.newSubMessage, clock);
-               return;
-           }
-           if(days > 0){
-               jQuery('#days').text(prependZero(days));
-               jQuery('.days').css('display', 'inline-block');
-           }
-           var intervalID = setInterval(function(){
-               duration = moment.duration(duration - interval, 'milliseconds');
-               var hours = duration.hours(),
-                  minutes = duration.minutes(),
-                  seconds = duration.seconds();
-               days = duration.days();
-               if(hours  <= 0 && minutes <= 0 && seconds  <= 0 && days <= 0){
-                  clearInterval(intervalID);
-                  endEvent(subMessage, config.newSubMessage, clock);
-                  window.location.reload();
-               }
-               if(days === 0){
-                   jQuery('.days').hide();
-               }
-               $('#days').text(prependZero(days));
-               config.hours.text(prependZero(hours));
-               config.minutes.text(prependZero(minutes));
-               config.seconds.text(prependZero(seconds));
-           }, interval);
-       }
-      function endEvent($el, newText, hideEl){
-         $el.text(newText);
-         hideEl.hide();
-      }
-      timer();
-  });
+  function timer(settings){
+    var config = {
+        endDate: '2019-12-31 24:00',
+        timeZone: 'Europe/Moscow',
+        hours: jQuery('#hours'),
+        minutes: jQuery('#minutes'),
+        seconds: jQuery('#seconds'),
+        newSubMessage: 'The time has come'
+    };
+    function prependZero(number){
+        return number < 10 ? '0' + number : number;
+    }
+    $.extend(true, config, settings || {});
+    var currentTime = moment();
+    var endDate = moment.tz(config.endDate, config.timeZone);
+    var diffTime = endDate.valueOf() - currentTime.valueOf();
+    var duration = moment.duration(diffTime, 'milliseconds');
+    var days = duration.days();
+    var interval = 1000;
+    var subMessage = jQuery('.sub-message');
+    var clock = jQuery('.clock');
+    if(diffTime < 0){
+        endEvent(subMessage, config.newSubMessage, clock);
+        return;
+    }
+    if(days > 0){
+        jQuery('#days').text(prependZero(days));
+        jQuery('.days').css('display', 'inline-block');
+    }
+    var intervalID = setInterval(function(){
+        duration = moment.duration(duration - interval, 'milliseconds');
+        var hours = duration.hours(),
+            minutes = duration.minutes(),
+            seconds = duration.seconds();
+        days = duration.days();
+        if(hours  <= 0 && minutes <= 0 && seconds  <= 0 && days <= 0){
+            clearInterval(intervalID);
+            endEvent(subMessage, config.newSubMessage, clock);
+            window.location.reload();
+        }
+        if(days === 0){
+            jQuery('.days').hide();
+        }
+        jQuery('#days').text(prependZero(days));
+        config.hours.text(prependZero(hours));
+        config.minutes.text(prependZero(minutes));
+        config.seconds.text(prependZero(seconds));
+    }, interval);
+  }
+
+  function endEvent($el, newText, hideEl){
+    $el.text(newText);
+    hideEl.hide();
+  }
+  timer();
+
 
 	jQuery(".top-carousel .owl-carousel").owlCarousel({
       items: 1,
@@ -136,6 +136,42 @@ jQuery(document).ready(function() {
       }
   });
 
+  jQuery('.top-row .search-container input').focus(function(){
+    jQuery('.top-row .check-container button[type=submit]').addClass('active');
+  });
+  
+  jQuery('.wach-sub-filter .serach-f-wrapper input').focus(function(){
+    jQuery('.wach-sub-filter .serach-f-wrapper button[type=submit]').addClass('active');
+  });
+
+
+  jQuery('.top-row .check-container .check').on('change', function(){
+    if(jQuery(this).prop('checked')){
+      jQuery('.athletes-rankings .filter-wrapper .sub-row').removeClass('hidden');
+    }else{
+      jQuery('.athletes-rankings .filter-wrapper .sub-row').addClass('hidden');
+    }
+  });
+
+  jQuery('.wach-sub-filter .wach-cards .card').on('click', function(){
+    var videoLink = jQuery(this).attr('data-link');
+        cardH = jQuery(this).children('.card-h').html(),
+        cardDate = jQuery(this).children('.card-info').children('.card-date').html(),
+        cardTitle = jQuery(this).children('.card-info').children('.card-title').html(),
+        cardLink = jQuery(this).children('.card-info').children('.card-link').html();
+
+    jQuery('.wach-main-player .wach-player-wrapper .frame-wr iframe').attr('src',videoLink); 
+    jQuery('.wach-main-player .wach-h').html(cardH);
+    jQuery('.wach-main-player .wach-date').html(cardDate);
+    jQuery('.wach-main-player .wach-player-wrapper .wach-title').html(cardTitle);
+    jQuery('.wach-main-player .wach-player-wrapper .wach-link').html(cardLink);
+
+    jQuery('html, body').animate({scrollTop:0}, 400);
+
+
+  });
+
+  
 });
 
 
