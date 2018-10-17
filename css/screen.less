@@ -3875,5 +3875,84 @@
     	.wach-main-player .wach-h{
     		font-size: 26px;
     	}
+    	.partners .right .partner p{
+    		font-size: 11px;
+    	}
+		.partners {
+			margin: 0;
+			flex-direction: column;
+			background: rgb(233, 233, 241);
+			padding: 0;
+		}
+		.partners .left{
+			position: relative;
+			z-index: 3;
+		}
+		.partners .right {
+		    margin-right: auto;
+		    margin-bottom: 0;
+		    padding-bottom: 7px;
+			border-bottom: 1px solid #e0e0e7;
+			box-shadow: 0 10px 29px #d8d9df;
+			    border-top: 1px solid #2a226f;
+			    background:#fff; 
+		}
+		.partners .right .timer>div u {
+		    width: 40px;
+		    height: 27px;
+		    font-size: 21px;
+		    margin-top: 2px;
+		}
+		.partners .right .timer>div{
+			margin-left: 2px;
+			font-size: 12px;
+		}
+		.partners .right .partner img{
+			max-width: 160px;
+		}
+		.news{
+			padding-top: 35px;
+		}
+		.social-wall{
+			.col-sm-4{
+				display: flex;
+				align-items: flex-start;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				&:first-child .card:nth-child(3){
+					display: none;
+				}
+				.card{
+					width: 48%;
+					margin-bottom: 13px;
+					span.info{
+						height: 131px;
+						font-size: 14px;
+					}
+					img{
+						height: 120px;
+						object-fit: cover;
+					}
+					.soc {
+						position: relative;
+						z-index: 4;
+						i{
+							line-height: 1;
+						}
+					}
+				}
+				.card.facebook .soc {
+					height: 43px;
+					i{
+						padding-top: 7px;
+						padding-left: 13px;
+						background-position-y: 5px;
+					}
+				}
+
+			}
+		}
+
+
 	}
 
